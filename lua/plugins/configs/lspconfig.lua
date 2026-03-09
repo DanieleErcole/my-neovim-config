@@ -21,15 +21,6 @@ local formatting_servers = {
     -- ruff_lsp = {},
     vimls = {},
     yamlls = {},
-    rust_analyzer = {
-        settings = {
-            ["rust_analyzer"] = {
-                cargo = {
-                    allFeatures = true
-                },
-            },
-        },
-    },
     lua_ls = {
         settings = {
             Lua = {

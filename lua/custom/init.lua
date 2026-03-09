@@ -17,11 +17,28 @@ M.configs = function()
 end
 
 -- add servers to be used for auto formatting here
-M.formatting_servers = {}
+M.formatting_servers = {
+    hls = {
+        settings = {
+            cabalFormattingProvider = "cabal-fmt",
+            formattingProvider = "fourmolu"
+        },
+    },
+    rust_analyzer = {
+        settings = {
+            ["rust_analyzer"] = {
+                cargo = {
+                    allFeatures = true
+                },
+            },
+        },
+    },
+}
 
 -- add Tree-sitter to auto-install
 M.ensure_installed = {
     "rust",
+    "haskell",
     "toml"
 }
 
