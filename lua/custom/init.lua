@@ -19,9 +19,12 @@ end
 -- add servers to be used for auto formatting here
 M.formatting_servers = {
     hls = {
+        filetypes = { 'haskell', 'lhaskell', 'cabal' },
         settings = {
-            cabalFormattingProvider = "cabal-fmt",
-            formattingProvider = "fourmolu"
+            haskell = {
+                cabalFormattingProvider = "cabal-fmt",
+                formattingProvider = "ormolu"
+            },
         },
     },
     rust_analyzer = {

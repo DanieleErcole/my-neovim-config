@@ -10,6 +10,7 @@
 -- Description: LSP setup and config
 -- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
 local merge_tables = require("utils").merge_tables
+local dump = require("utils").dump_table
 
 local exist, custom = pcall(require, "custom")
 local custom_formatting_servers = exist and type(custom) == "table" and custom.formatting_servers or {}
@@ -41,6 +42,7 @@ local formatting_servers = {
 
 -- Merge
 merge_tables(formatting_servers, custom_formatting_servers)
+-- vim.notify(dump(formatting_servers), vim.log.levels.INFO)
 
 local opts = {
     -- Automatically format on save
