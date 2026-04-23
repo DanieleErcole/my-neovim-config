@@ -78,14 +78,8 @@ map("n", "<leader>sn", function()
     builtin.find_files({ cwd = vim.fn.stdpath("config") })
 end, { desc = "[S]earch [N]eovim files" })
 
--- Mini.files
-map("n", "<leader>fm", function()
-    require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
-end, { desc = "Open [m]ini.files (Directory of Current File)" })
-
-map("n", "<leader>fM", function()
-    require("mini.files").open(vim.uv.cwd(), true)
-end, { desc = "Open [M]ini.files (cwd)" })
+--Nvim-tree
+map("n", "<leader>f", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 
 -- Autoformat
 map("n", "<leader>l", function()

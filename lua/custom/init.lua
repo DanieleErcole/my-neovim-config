@@ -38,13 +38,6 @@ M.formatting_servers = {
     },
 }
 
--- add Tree-sitter to auto-install
-M.ensure_installed = {
-    "rust",
-    "haskell",
-    "toml"
-}
-
 M.cmds = function(cmd)
     cmd.colorscheme("min-theme")
 end
