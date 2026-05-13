@@ -86,7 +86,8 @@ local function setup(server)
             return
         end
     end
-    require("lspconfig")[server].setup(server_opts)
+    vim.lsp.config(server, server_opts)
+    -- require("lspconfig")[server].setup(server_opts)
 end
 
 local mlsp = require("mason-lspconfig")
