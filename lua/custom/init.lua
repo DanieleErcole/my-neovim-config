@@ -3,8 +3,8 @@ local M = {}
 -- add extra plugins here
 M.plugins = {
     { 'MeanderingProgrammer/render-markdown.nvim' },
-    { "kvrohit/rasmus.nvim" },
-    { "datsfilipe/min-theme.nvim" },
+    { "DanieleErcole/rasmus.nvim" },
+    { "DanieleErcole/min-theme.nvim" },
     { "nickjvandyke/opencode.nvim" },
 }
 
