@@ -5,6 +5,7 @@ M.plugins = {
     { 'MeanderingProgrammer/render-markdown.nvim' },
     { "DanieleErcole/rasmus.nvim" },
     { "DanieleErcole/min-theme.nvim" },
+    { "mellow-theme/mellow.nvim" },
     { "nickjvandyke/opencode.nvim" },
 }
 
@@ -40,7 +41,7 @@ M.formatting_servers = {
 
 M.cmds = function(cmd)
     if vim.env.NVIM_MODE == "desktop" then
-        cmd.colorscheme("rasmus")
+        cmd.colorscheme("mellow")
     else
         cmd.colorscheme("min-theme")
     end
