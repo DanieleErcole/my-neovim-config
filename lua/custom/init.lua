@@ -14,6 +14,7 @@ M.plugins = {
 M.configs = function()
     require("custom.configs.rasmus")
     require("custom.configs.min-theme")
+    require("custom.configs.mellow")
     require("custom.configs.opencode")
 end
 
