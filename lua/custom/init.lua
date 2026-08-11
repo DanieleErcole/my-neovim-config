@@ -7,6 +7,10 @@ M.plugins = {
     { "DanieleErcole/min-theme.nvim" },
     { "mellow-theme/mellow.nvim" },
     { "nickjvandyke/opencode.nvim" },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+    },
 }
 
 -- add extra configuration options here, like extra autocmds etc.
@@ -16,6 +20,7 @@ M.configs = function()
     require("custom.configs.min-theme")
     require("custom.configs.mellow")
     require("custom.configs.opencode")
+    require("custom.configs.ibl")
 end
 
 -- add servers to be used for auto formatting here
