@@ -23,7 +23,7 @@ g.mapleader = " "
 g.maplocalleader = " "
 
 cmd([[
-	filetype plugin indent on
+    filetype plugin indent on
 ]])
 
 -- Sync clipboard between Neovim and the system.
@@ -31,7 +31,7 @@ cmd([[
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
+    vim.o.clipboard = "unnamedplus"
 end)
 
 -- Enable break indent
@@ -75,15 +75,15 @@ o.lazyredraw = true -- don"t update the display while executing macros
 --  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
 --   See `:help lua-options`
 --   and `:help lua-options-guide`
-o.list = true
+-- o.list = true
 -- You can also add "space" or "eol", but I feel it"s quite annoying
-o.listchars = {
-  tab = "┊ ",
-  trail = "·",
-  extends = "»",
-  precedes = "«",
-  nbsp = "×",
-}
+-- o.listchars = {
+--     tab = "▏ ",
+--     trail = "·",
+--     extends = "»",
+--     precedes = "«",
+--     nbsp = "×",
+-- }
 
 -- Hide cmd line
 o.cmdheight = 0         -- more space in the neovim command line for displaying messages
@@ -111,7 +111,7 @@ o.writebackup = false -- if a file is being edited by another program (or was wr
 -- autocomplete
 o.completeopt = { "menu", "menuone", "noselect" } -- mostly just for cmp
 o.shortmess = o.shortmess + {
-  c = true,
+    c = true,
 } -- hide all the completion messages, e.g. "-- XXX completion (YYY)", "match 1 of 2", "The only match", "Pattern not found"
 
 -- By the way, -- INSERT -- is unnecessary anymore because the mode information is displayed in the statusline.
@@ -142,35 +142,35 @@ o.foldlevel = 99
 
 -- Disable builtin plugins
 local disabled_built_ins = {
-  "2html_plugin",
-  "getscript",
-  "getscriptPlugin",
-  "gzip",
-  "logipat",
-  "netrw",
-  "netrwPlugin",
-  "netrwSettings",
-  "netrwFileHandlers",
-  "matchit",
-  "tar",
-  "tarPlugin",
-  "rrhelper",
-  "spellfile_plugin",
-  "vimball",
-  "vimballPlugin",
-  "zip",
-  "zipPlugin",
-  "tutor",
-  "rplugin",
-  "synmenu",
-  "optwin",
-  "compiler",
-  "bugreport",
-  "ftplugin",
+    "2html_plugin",
+    "getscript",
+    "getscriptPlugin",
+    "gzip",
+    "logipat",
+    "netrw",
+    "netrwPlugin",
+    "netrwSettings",
+    "netrwFileHandlers",
+    "matchit",
+    "tar",
+    "tarPlugin",
+    "rrhelper",
+    "spellfile_plugin",
+    "vimball",
+    "vimballPlugin",
+    "zip",
+    "zipPlugin",
+    "tutor",
+    "rplugin",
+    "synmenu",
+    "optwin",
+    "compiler",
+    "bugreport",
+    "ftplugin",
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-  g["loaded_" .. plugin] = 1
+    g["loaded_" .. plugin] = 1
 end
 
 -- Colorscheme
@@ -179,14 +179,14 @@ end
 
 -- Enable virtual_lines feature if the current nvim version is 0.11+
 if vim.fn.has("nvim-0.11") > 0 then
-  vim.diagnostic.config({
-    -- Use the default configuration
-    -- virtual_lines = true,
+    vim.diagnostic.config({
+        -- Use the default configuration
+        -- virtual_lines = true,
 
-    -- Alternatively, customize specific options
-    virtual_lines = {
-      -- Only show virtual line diagnostics for the current cursor line
-      current_line = true,
-    },
-  })
+        -- Alternatively, customize specific options
+        virtual_lines = {
+            -- Only show virtual line diagnostics for the current cursor line
+            current_line = true,
+        },
+    })
 end
