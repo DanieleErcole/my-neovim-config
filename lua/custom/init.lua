@@ -6,6 +6,7 @@ M.plugins = {
     { "DanieleErcole/rasmus.nvim" },
     { "DanieleErcole/min-theme.nvim" },
     { "mellow-theme/mellow.nvim" },
+    { "DanieleErcole/mellow-green.nvim" },
     { "nickjvandyke/opencode.nvim" },
     {
         "lukas-reineke/indent-blankline.nvim",
@@ -19,6 +20,7 @@ M.configs = function()
     require("custom.configs.rasmus")
     require("custom.configs.min-theme")
     require("custom.configs.mellow")
+    require("custom.configs.mellow-green")
     require("custom.configs.opencode")
     require("custom.configs.ibl")
 end
@@ -47,7 +49,7 @@ M.formatting_servers = {
 
 M.cmds = function(cmd)
     if vim.env.NVIM_MODE == "desktop" then
-        cmd.colorscheme("mellow")
+        cmd.colorscheme("mellow-green")
     else
         cmd.colorscheme("min-theme")
     end
