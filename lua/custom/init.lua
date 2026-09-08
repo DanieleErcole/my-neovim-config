@@ -49,7 +49,7 @@ M.formatting_servers = {
 
 M.cmds = function(cmd)
     if vim.env.NVIM_MODE == "desktop" then
-        cmd.colorscheme("mellow-green")
+        cmd.colorscheme("mellow")
     else
         cmd.colorscheme("min-theme")
     end
