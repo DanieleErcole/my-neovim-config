@@ -46,6 +46,7 @@ M.formatting_servers = {
             },
         },
     },
+    pylsp = {},
 }
 
 M.cmds = function(cmd)
