@@ -7,10 +7,7 @@ M.plugins = {
     { "DanieleErcole/min-theme.nvim" },
     { "mellow-theme/mellow.nvim" },
     { "DanieleErcole/mellow-green.nvim" },
-    {
-        "DanieleErcole/yoruish.nvim",
-        branch = "luna-base"
-    },
+    { "DanieleErcole/yoruish.nvim", },
     { "nickjvandyke/opencode.nvim" },
     {
         "lukas-reineke/indent-blankline.nvim",
