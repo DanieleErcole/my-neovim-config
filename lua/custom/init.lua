@@ -6,9 +6,7 @@ M.plugins = {
     { "DanieleErcole/rasmus.nvim" },
     { "DanieleErcole/min-theme.nvim" },
     { "mellow-theme/mellow.nvim" },
-    { "DanieleErcole/mellow-green.nvim" },
     { "DanieleErcole/yoruish.nvim", },
-    { "nickjvandyke/opencode.nvim" },
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
@@ -18,11 +16,10 @@ M.plugins = {
 -- add extra configuration options here, like extra autocmds etc.
 -- feel free to create your own separate files and require them in here
 M.configs = function()
+    require("custom.configs.yoruish")
     require("custom.configs.rasmus")
     require("custom.configs.min-theme")
     require("custom.configs.mellow")
-    require("custom.configs.mellow-green")
-    require("custom.configs.opencode")
     require("custom.configs.ibl")
 end
 
