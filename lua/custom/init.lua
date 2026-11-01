@@ -50,7 +50,7 @@ M.cmds = function(cmd)
     if vim.env.NVIM_MODE == "desktop" then
         cmd.colorscheme("yoruish")
     else
-        cmd.colorscheme("min-theme")
+        cmd.colorscheme("yoruish")
     end
 end
 
