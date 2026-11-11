@@ -13,6 +13,14 @@
 -- <leader> is a space now
 local map = vim.keymap.set
 local cmd = vim.cmd
+local fn = vim.fn
+
+-- Custom text/line manip
+map("n", "<leader>dd", function()
+    local col = fn.col(".")
+    cmd("t.")
+    fn.cursor(fn.line("."), col)
+end, { desc = "[D]uplicate line keeping the cursor position" })
 
 -- Move around splits
 map("n", "<leader>wh", "<C-w>h", { desc = "Switch [W]indow left" })
@@ -75,7 +83,7 @@ end, { desc = "[S]earch [/] in Open Files" })
 
 -- Shortcut for searching your Neovim configuration files
 map("n", "<leader>sn", function()
-    builtin.find_files({ cwd = vim.fn.stdpath("config") })
+    builtin.find_files({ cwd = fn.stdpath("config") })
 end, { desc = "[S]earch [N]eovim files" })
 
 --Nvim-tree
