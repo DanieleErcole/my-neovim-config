@@ -11,6 +11,14 @@ M.plugins = {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
     },
+    {
+        'nvim-flutter/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+        },
+        config = true,
+    }
 }
 
 -- add extra configuration options here, like extra autocmds etc.
@@ -21,6 +29,7 @@ M.configs = function()
     require("custom.configs.min-theme")
     require("custom.configs.mellow")
     require("custom.configs.ibl")
+    require("custom.configs.flutter-tools")
 end
 
 -- add servers to be used for auto formatting here
@@ -47,11 +56,7 @@ M.formatting_servers = {
 }
 
 M.cmds = function(cmd)
-    if vim.env.NVIM_MODE == "desktop" then
-        cmd.colorscheme("yoruish")
-    else
-        cmd.colorscheme("yoruish")
-    end
+    cmd.colorscheme("yoruish")
 end
 
 return M
